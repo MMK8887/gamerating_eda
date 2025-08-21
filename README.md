@@ -1,27 +1,82 @@
-A complete data analysis and machine learning for game ratings data 🎮
-This project performs a comprehensive data analysis and machine learning workflow on a game ratings dataset. It covers data cleaning, exploratory data analysis (EDA), and building a predictive model to understand and predict game ratings based on various features.
+# 🎮 Analysis of Game Ratings Data
 
-Project Structure
-Part 1: Project Setup and Data Loading: The necessary libraries like pandas, seaborn, matplotlib.pyplot, and scikit-learn are imported. The game_ratings.csv dataset is loaded into a pandas DataFrame. The initial DataFrame information is printed, showing 101 entries and 4 columns: Game Name, Developer, Genre, and Rating.
+This project performs a comprehensive **data analysis and machine learning workflow** on a game ratings dataset.  
+It covers **data cleaning, exploratory data analysis (EDA), and insights** into patterns across genres and developers.  
 
-Part 2: Data Cleaning and Preprocessing: The dataset is checked for missing values and duplicates. The output confirms there are no missing values or duplicate rows, indicating a clean dataset ready for analysis.
+---
 
-Part 3: Exploratory Data Analysis (EDA) and Visualization: This section focuses on understanding the data through statistical summaries and visualizations.
+## 📂 Project Structure
 
-A descriptive summary of the Rating column is provided. The ratings range from 4.10 to 4.90, with a mean of 4.40.
+### Part 1: Project Setup and Data Loading
+- Imported libraries: `pandas`, `seaborn`, `matplotlib`, and `scikit-learn`.
+- Loaded the dataset `game_ratings.csv` into a pandas DataFrame.
+- Dataset overview:
+  - **101 entries**  
+  - **4 columns**: `Game Name`, `Developer`, `Genre`, `Rating`
 
-A histogram visualizes the distribution of ratings, showing that most games in the dataset are highly rated, with a peak around 4.4.
+### Part 2: Data Cleaning and Preprocessing
+- Checked for missing values → **None found** ✅  
+- Checked for duplicate rows → **None found** ✅  
+- Data is clean and ready for analysis.  
 
-A bar chart displays the number of games per genre, highlighting Action and Adventure as the most frequent genres.
+### Part 3: Exploratory Data Analysis (EDA) and Visualization
+We explored the dataset through **statistical summaries and visualizations**:
 
-Another bar chart shows the average rating per genre, revealing that Role-Playing games have the highest average rating in this dataset.
+#### 📊 Descriptive Statistics of Ratings
+- Ratings range: **4.1 – 4.9**  
+- Mean: **4.40**, Median: **4.40**, Std. Dev.: **0.175**  
+- Boxplot & histogram confirm most ratings cluster around **4.3–4.6**  
 
-Part 4: Feature Engineering for Machine Learning: Categorical variables (Genre and Developer) are converted into a numerical format using one-hot encoding. This process creates a new feature set with 103 columns, which is necessary for training the machine learning model.
+#### 🎭 Genre Analysis
+- **Most frequent genre**: Strategy (**17 games**)  
+- Simulation (**14 games**) and Puzzle (**13 games**) follow closely.  
+- **Highest avg. rating**: Sandbox & Action RPG (**4.65**)  
+- **Lowest avg. rating**: Card (**4.1**)  
 
-Part 5: Model Building and Evaluation:
+#### 🏆 Top and Bottom Rated Games
+- **Top 5 games**:  
+  - *Hades (4.9)*, *Minecraft (4.8)*, *Monument Valley (4.8)*, *The Room (4.8)*  
+- **Bottom 5 games**:  
+  - *Fortnite (4.1)*, *Hearthstone (4.1)*, *State of Survival (4.1)*, *Clash of Kings (4.1)*, *Forge of Empires (4.1)*  
 
-Data Split: The data is split into training (80 samples) and testing (21 samples) sets to train and evaluate the model's performance on unseen data.
+#### 🏢 Developer Analysis
+- **Supercell**: 5 games (most prolific)  
+- **Electronic Arts**: 4 games  
+- **Rovio Entertainment**: 3 games  
+- Most developers: only **1 game** each  
 
-Model Training: A RandomForestRegressor is initialized and trained on the training data.
+---
 
-Model Evaluation: The model's performance is measured using Mean Absolute Error (MAE) and R-squared (R²). The MAE is 0.14, meaning the average prediction is off by 0.14 points. The R-squared value is 0.09, which is a low score, suggesting that the selected features (Genre and Developer) do not effectively predict the game's rating, and the model only explains 9% of the variance in ratings.
+## 📌 Key Insights
+- Ratings are **consistently high**, with a slight skew towards **4.4**.  
+- **Strategy** is the most common genre, but **Sandbox & Action RPG** perform best in terms of ratings.  
+- Developers like **Supercell** and **Electronic Arts** dominate in terms of game count.  
+- Certain genres (e.g., Card, MOBA, Battle Royale) tend to have **lower ratings**.  
+
+---
+
+## 🚀 Future Work
+- Build **predictive models** to forecast ratings based on features.  
+- Extend dataset with **user reviews, release year, and platform data**.  
+- Perform **time-series analysis** of rating trends across years.  
+
+---
+
+## 📎 Dataset
+The dataset `game_ratings.csv` contains:
+- `Game Name` → Title of the game  
+- `Developer` → Studio/creator of the game  
+- `Genre` → Category (e.g., Strategy, RPG, Puzzle)  
+- `Rating` → Average player rating (scale 1–5)  
+
+---
+
+## 🛠️ Tech Stack
+- **Python** 🐍  
+- **Pandas / NumPy** → Data handling  
+- **Seaborn / Matplotlib** → Visualization  
+
+---
+
+## 👨‍💻 Authors
+MANISH M KUMAR  
